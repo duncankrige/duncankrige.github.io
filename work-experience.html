@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duncan Krige - Work Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-image" style="background-image: url('back9.png');"></div>
+        <nav>
+            <div class="name-dropdown">
+                <a href="#" class="name">Duncan Krige</a>
+                <div class="dropdown-content">
+                    <p>Email: duncankrige@gmail.com</p>
+                    <p>Phone: (346) 290-2522</p>
+                    <p><a href="https://www.linkedin.com/in/duncan-krige-16257a226" target="_blank">LinkedIn</a></p>
+                </div>
+            </div>
+            <div class="right-tabs">
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Data Portfolio</a>
+                <a href="work-experience.html">Work Experience</a>
+                <a href="current.html">Current</a>
+                <a href="Resume Feb 2025.pdf" target="_blank">Resume</a>
+                <a href="https://tome.app/duncan-62a/infographic-resume-clkb4rv1m05aco05qojycl0k3" target="_blank">Infographic</a>
+            </div>
+        </nav>
+        <div class="intro-text">Work Experience</div>
+    </header>
+
+    <main>
+        <div class="toc">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#project-leader">Project Leader</a></li>
+                <li><a href="#sap-intern">SAP Implementation Intern</a></li>
+                <li><a href="#agricultural-assistant">Agricultural Production Assistant</a></li>
+            </ul>
+        </div>
+        <section id="work-experience">
+            <h2 id="work-experience">Work Experience</h2>
+
+            <!-- Project Leader (Lindenwood University Sports Department) -->
+            <div class="company">
+                <div class="skills-tools-sidebar">
+                    <h4>Skills & Tools</h4>
+                    <ul>
+                        <li>R</li>
+                        <li>SQL (DBeaver)</li>
+                        <li>Data Analysis</li>
+                        <li>Web Development</li>
+                        <li>Data Visualization</li>
+                        <li>Collaboration</li>
+                    </ul>
+                </div>
+                <img src="logo.png" alt="Lindenwood University LPC Program">
+                <h3 id="project-leader">Project Leader (Data Science - LPC Program)</h3>
+                <p>Lindenwood University Sports Department, Saint Charles<br>September 2024 - Present</p>
+                <ul>
+                    <li>Collection, processing, and analysis of performance data for baseball, softball, and basketball teams, including advanced metrics such as Rapsodo readings and other specialized baseball data.</li>
+                    <li>Developed and launched custom websites from scratch for each team, providing game charters, visualizations, and interpreting performance statistics in over 8 areas for athletes.</li>
+                    <li>Ensured the accuracy and integrity. Leveraged R and SQL in translating over 20,000 raw metrics in each area into clear, actionable insights for coaching staff and players.</li>
+                    <li>Collaborated closely with team management and coaching staff to tailor data dashboards and reports, improving decision-making in player development and game strategy.</li>
+                </ul>
+            </div>
+
+            <!-- SAP Implementation Intern (BSN Sports) -->
+            <div class="company">
+                <div class="skills-tools-sidebar">
+                    <h4>Skills & Tools</h4>
+                    <ul>
+                        <li>SAP ERP</li>
+                        <li>Microsoft Excel</li>
+                        <li>JIRA/Trello</li>
+                        <li>SQL</li>
+                        <li>Data Management</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+                <img src="bsn1.jpg" alt="BSN Sports">
+                <h3 id="sap-intern">SAP Implementation Intern</h3>
+                <p>Varsity Brand / BSN Sports and Varsity Spirit, Dallas<br>June 2023 - September 2023</p>
+                <ul>
+                    <li>Responsible for master data gathering, analysis, scrubbing, and mapping, ensuring data integrity and accuracy for a 37,230 SKU database.</li>
+                    <li>Reviewed the scope and documentation of new processes during ERP implementation of production and manufacturing.</li>
+                    <li>Reviewed and optimized 37,230 SKU database, eliminating duplicates and obsolete entries, reducing overall size to 20,000 styles.</li>
+                    <li>Responsible for manual master data loads, including work centres, routings, and other relevant data, when required.</li>
+                    <li>Project Management scribe; contributing to the review of results, prioritization of tasks, and planning for future initiatives.</li>
+                </ul>
+            </div>
+
+            <!-- Agricultural Production Assistant (Blaauwboschkuil Farming) -->
+            <div class="company">
+                <div class="skills-tools-sidebar">
+                    <h4>Skills & Tools</h4>
+                    <ul>
+                        <li>Process Optimization</li>
+                        <li>Data Analysis</li>
+                        <li>Logistics Management</li>
+                        <li>Sustainable Farming</li>
+                        <li>Technical Installation</li>
+                    </ul>
+                </div>
+                <img src="farm.png" alt="Blaauwboschkuil Farm">
+                <h3 id="agricultural-assistant">Agricultural Production Assistant (Part Time)</h3>
+                <p>Blaauwboschkuil Farming Sustainably, Port Elizabeth, South Africa<br>January 2018 – August 2021</p>
+                <ul>
+                    <li>Responsible for the optimization of feeding and production processes for lamb and chickens, going from purchased feed to internally produced, resulting in a 50% cost reduction while maintaining all necessary nutritional and quantity needs.</li>
+                    <li>Designed and authored the manufacturing process for the animal feed of 2,000+ sheep.</li>
+                    <li>Reviewed and modified logistical process of onsite transport, resulting in a 5% improvement.</li>
+                    <li>Installation of solar water pumps, repaired pipelines, constructed drainage systems, and erected fences to support Strip Grazing to improve the farm’s carrying capacity and water availability by 20%.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript for TOC Scroll Fix and Sidebar Alignment -->
+    <script>
+        // TOC Scroll Fix
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight - 20;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sidebar Alignment with <h3>
+        document.querySelectorAll('.company').forEach(company => {
+            const sidebar = company.querySelector('.skills-tools-sidebar');
+            const h3 = company.querySelector('h3');
+            if (sidebar && h3) {
+                const h3Top = h3.getBoundingClientRect().top + window.scrollY - company.getBoundingClientRect().top;
+                sidebar.style.top = `${h3Top}px`;
+            }
+        });
+    </script>
+</body>
+</html>
